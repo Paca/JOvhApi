@@ -159,7 +159,7 @@ public class OvhApi {
 			conn.setRequestProperty("X-Ovh-Signature", signature);
 			conn.setRequestProperty("X-Ovh-Timestamp", "" + time);
 			
-			if(body != "")
+			if(!body.isEmpty())
 			{
 				conn.setDoOutput(true);
 				DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
